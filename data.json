@@ -1,0 +1,741 @@
+{
+  "state": {
+    "version": 2,
+    "lastRunId": {
+      "93794": "20261010T101700Z-a8e5",
+      "94846": "20261010T101700Z-a8e5"
+    },
+    "courses": {
+      "93794": {
+        "files": {
+          "Assignment/Assignment 1.pdf": {
+            "sha256": "7b779749d42a6ea5a98f9a7edc6199ad7ea7036e0e88786a8733ffe0888f4d44",
+            "size": 524881,
+            "writtenAt": 1789650432891
+          },
+          "Assignment/Assignment 2.pdf": {
+            "sha256": "b04f7602f732583b69fc5bbb564e0ead8941d202781835bff2b49c8c8025e366",
+            "size": 526783,
+            "writtenAt": 1789650433007
+          },
+          "CRAG Slides/Intro to CRAG.pdf": {
+            "sha256": "b1fff320c8183dc6947759e84337ba2e436a1526f29f3fff81505b13ca0e4f5f",
+            "size": 818929,
+            "writtenAt": 1789650433182
+          },
+          "Labs/2026-lab1-subnet-arp.pdf": {
+            "sha256": "ea0ecb22a2b377eea9ddd108475f4fad152707f06008701cd6b4b0bdf4c10af8",
+            "size": 704940,
+            "writtenAt": 1789650433263
+          },
+          "Labs/2026-lab2-dhcp-vlan.pdf": {
+            "sha256": "88afac9c25cbc480c4f9777631b1394067611531e50250e2fe1be3cf325b2a62",
+            "size": 339960,
+            "writtenAt": 1789650433359
+          },
+          "Labs/2026-lab3-mini-net.pdf": {
+            "sha256": "8424a5d965666abc578f6c3527f481a14cff016839cc45f56fe1dcaa1cc20541",
+            "size": 573976,
+            "writtenAt": 1789650433468
+          },
+          "Labs/labs-intro.pdf": {
+            "sha256": "73f0ffc89c84523cbc72fb0062d8ccd04a2fff3bcca92c5bed6f35772610623d",
+            "size": 458180,
+            "writtenAt": 1789650433569
+          },
+          "Lecture Notes & Readings/Lecture 1/L1- Introduction-IP Foundations.pdf": {
+            "sha256": "c13494191cd1cb20099f32a333599e6387e4dc875e1c57d3c708135c654ddc02",
+            "size": 3022799,
+            "writtenAt": 1789650433864
+          },
+          "Lecture Notes & Readings/Lecture 2/L2- Network Bootstrapping-ARP-DHCP.pdf": {
+            "sha256": "b43e5d2a72280513958a4050070ae7dffca6a5366524999611913df309942d92",
+            "size": 1418865,
+            "writtenAt": 1789650434051
+          },
+          "Lecture Notes & Readings/Lecture 3/L3- FramingAndSwitching-VLAN-MPLS.pdf": {
+            "sha256": "f382fabbcfc01b3d8915dc8afea2a46c48d2564e22827c11b4783d2e2ef1770d",
+            "size": 1465280,
+            "writtenAt": 1789650434208
+          },
+          "Lecture Notes & Readings/Lecture 4/L4-Internet Applications.pdf": {
+            "sha256": "f6e6761df0f47cc6a84ad60bd205e43390d6e95c56258b491a68b63f1e93902e",
+            "size": 4642757,
+            "writtenAt": 1789650434702
+          },
+          "Lecture Notes & Readings/Lecture 4/L4-Reference-HTTP3.pdf": {
+            "sha256": "6bd88a003c00f8bf6c2a029eb7301dd570f026e45a3b843708d561120560fc28",
+            "size": 646952,
+            "writtenAt": 1789650434824
+          },
+          "Lecture Notes & Readings/Lecture 5/L5- Socket Programming.pdf": {
+            "sha256": "11a780bd5bea643188d798e4ae649be1195745b8121fab4b61cedb2e5a6652fd",
+            "size": 831619,
+            "writtenAt": 1789650434976
+          },
+          "Lecture Notes & Readings/Lecture 5/L5-DNS - Internet Applications.pdf": {
+            "sha256": "5a84312bb02d91721e840269f1a5beef037af3964585f09a08191ed0d5718bd8",
+            "size": 1746668,
+            "writtenAt": 1789650435176
+          },
+          "Sample Codes/C_C++ Samples/tcpclient.c": {
+            "sha256": "263664e996f4d7f06481182554c46504ff66377a04f8d9e8a91c1825d7da6dad",
+            "size": 2360,
+            "writtenAt": 1789650435516
+          },
+          "Sample Codes/C_C++ Samples/tcpserver.c": {
+            "sha256": "059e9cd19f60e1b57afce6fa743773ce1f44e732030e3d3a726a0dcaf91837d4",
+            "size": 3012,
+            "writtenAt": 1789650435538
+          },
+          "Sample Codes/C_C++ Samples/tcpserverconcurrent.c": {
+            "sha256": "33c621524b2c38bc0adcd25891c7c9309894a707846b9bf6db8de875b1dd8d49",
+            "size": 3470,
+            "writtenAt": 1789650435606
+          },
+          "Sample Codes/C_C++ Samples/udpclient.c": {
+            "sha256": "dc366584982ecb2fcba79081c0f519ab24cc76a823ec8d264ca51df9f46e2844",
+            "size": 1974,
+            "writtenAt": 1789650435636
+          },
+          "Sample Codes/C_C++ Samples/udpserver.c": {
+            "sha256": "2eb5c050cf2fcebbd9f0e6fba265f68cab56bbd36e8641921c2c36d1a4da587b",
+            "size": 1916,
+            "writtenAt": 1789650435666
+          },
+          "Sample Codes/Python Samples/rawsocket.py": {
+            "sha256": "33b6d0742898909741acbf839011a54fb594b6d72e48300084f9b384eb46911f",
+            "size": 862,
+            "writtenAt": 1789650435811
+          },
+          "Sample Codes/Python Samples/tcpclient.py": {
+            "sha256": "d192f07d1ea2e60a7f304041f0a02c40a1ff4b94469d6bed408e9964b891f7f6",
+            "size": 827,
+            "writtenAt": 1789650435832
+          },
+          "Sample Codes/Python Samples/tcpserver.py": {
+            "sha256": "039b61dcd38d1501f469ad82f02616c64271fd63f246f7b11930be7b8802197b",
+            "size": 1197,
+            "writtenAt": 1789650435905
+          },
+          "Sample Codes/Python Samples/tcpserverconcurrent.py": {
+            "sha256": "6853fa42b6f7843f5b026d9fd7827cfdd6a634ff298555917506e45cb08bc990",
+            "size": 1339,
+            "writtenAt": 1789650435922
+          },
+          "Sample Codes/Python Samples/udpclient.py": {
+            "sha256": "ea3e95c84091de2cec2d5fceb49bcb398ed20a9a4366309284be9bc5000eb752",
+            "size": 776,
+            "writtenAt": 1789650435957
+          },
+          "Sample Codes/Python Samples/udpserver.py": {
+            "sha256": "17eced2793b94599d9eb52d96175c487ae24649a6072f6cd3f6935feec2bcbbb",
+            "size": 1153,
+            "writtenAt": 1789650435973
+          },
+          "Sample Codes/Useful commands": {
+            "sha256": "406ae640641ea0d64cbfc142c22d484078cb2c1fa64174dcbb5ab92c4d1ea3c2",
+            "size": 1740,
+            "writtenAt": 1789650435989
+          },
+          "Labs/2026-lab4-DNS.pdf": {
+            "sha256": "114e94be7775cbac450ba008d8ca44976490e0b126a822ebac3c3807aaa2a910",
+            "size": 404748,
+            "writtenAt": 1789650403201
+          },
+          "Lecture Notes & Readings/Lecture 6/L6- Wireless LAN.pdf": {
+            "sha256": "5fbdd22a29fc5b7b38c49a2bb090487ed3d41ec841a7ffc17dddcf531a85d5ea",
+            "size": 2731834,
+            "writtenAt": 1789650435490
+          },
+          "Assignment/Assignment 3 C-S programming.pdf": {
+            "sha256": "c4491ff805285d0d80a321c9f90387cf06bbd5668df713a497cb7d2832ede6b0",
+            "size": 873837,
+            "writtenAt": 1790856527153
+          },
+          "Labs/2026-lab5-WLAN.pdf": {
+            "sha256": "9f20420c0785414e19cbb9b367091e0c1eba9eee8b9c68bea7013c7ac48871d1",
+            "size": 291030,
+            "writtenAt": 1790785019595
+          },
+          "Lecture Notes & Readings/Lecture 7/L7-IP options, ICMP, NAT traversal.pdf": {
+            "sha256": "d456586038007800982cb60719c6aea4d1dec6bc880e2ecc68e21be06caadd5e",
+            "size": 2485658,
+            "writtenAt": 1790785019884
+          },
+          "mid-term test/CS3103 Midterms Brief Slides AY2627 Sem 1.pdf": {
+            "sha256": "7349a86bc5799c64ca6a80fabe57092e5c8f5922c7e69c7be6b0c3461a628385",
+            "size": 784216,
+            "writtenAt": 1791467843073
+          },
+          "mid-term test/Sample Test Questions.pdf": {
+            "sha256": "f0601babe8ccae1ddcbc08332ef6e563b21d7f8946447f732a1093ea096bd75a",
+            "size": 109833,
+            "writtenAt": 1790998689103
+          }
+        },
+        "folder": "CS3103 [2610] (93794)",
+        "choices": {
+          "Labs/2026-lab4-DNS.pdf": true
+        }
+      },
+      "94846": {
+        "files": {
+          "Einheit 0 bis Einheit 4/Bist du Martin_ -- Satzfragen und W-Fragen auf Deutsch (Lösungen)_v2.pdf": {
+            "sha256": "15bc2087ef25db1de6299150dbbcfbb3cc37a325c6e132f76d9d1e08150a04e5",
+            "size": 298260,
+            "writtenAt": 1790079820224
+          },
+          "Einheit 0 bis Einheit 4/Bist du Martin_ -- Satzfragen und W-Fragen auf Deutsch.pdf": {
+            "sha256": "be621adb7663d69b07d7df64417fdbc9dd76685eff6053a65b25508bfcae16d7",
+            "size": 176375,
+            "writtenAt": 1790079820301
+          },
+          "Einheit 0 bis Einheit 4/Das ist (k)ein.pdf": {
+            "sha256": "4dbbbc69f5460a87196fa6e60483fd405fd9b0e17c0fcdcbd15a0b0d37cbc322",
+            "size": 117069,
+            "writtenAt": 1790079820328
+          },
+          "Einheit 0 bis Einheit 4/Das ist (k)ein_LS.pdf": {
+            "sha256": "94d5a6239449d6af30549c205ba92d0f05d96796a1e50081a6b39983198c066a",
+            "size": 172518,
+            "writtenAt": 1790079820368
+          },
+          "Einheit 0 bis Einheit 4/Kasus - Nominativ und Akkusativ (Lösungen)_v2.pdf": {
+            "sha256": "7970847e88f075bbb918cea5a63bf74d08525e5f53792407a4c18d3281df0cfc",
+            "size": 258486,
+            "writtenAt": 1790079820404
+          },
+          "Einheit 0 bis Einheit 4/Kasus - Nominativ und Akkusativ.pdf": {
+            "sha256": "042a2713793aec2ddc3608faebdd024ac22e50bb2d0b2672521abf973b709cc4",
+            "size": 149460,
+            "writtenAt": 1790079820435
+          },
+          "Einheit 0 bis Einheit 4/Negation auf Deutsch (Lösungen).pdf": {
+            "sha256": "f45ddfbfac69865d7cb1594218b344bd139a3264c7598ad82b94f4688fdb07d8",
+            "size": 355891,
+            "writtenAt": 1790079820499
+          },
+          "Einheit 0 bis Einheit 4/Negation auf Deutsch.pdf": {
+            "sha256": "a16629cad27c6271f4bc2dc085fa86aee4e1525fedeb421ac97fbe4b1db39de3",
+            "size": 347458,
+            "writtenAt": 1790079820590
+          },
+          "Einheit 0 bis Einheit 4/Nominativ und Akkusativ.pdf": {
+            "sha256": "3ea695d0dcc8104769386f10a925a8c4ae239bb160334600b8edcabee39b3322",
+            "size": 159898,
+            "writtenAt": 1790079820625
+          },
+          "Einheit 0 bis Einheit 4/Nominativ und Akkusativ_LS.pdf": {
+            "sha256": "0b1f2e6287ecb8e4785df61331b5f5e3aa39a42f184669510318713289cf7819",
+            "size": 161401,
+            "writtenAt": 1790079820704
+          },
+          "Einheit 0 bis Einheit 4/Test zu Einheit 1.pdf": {
+            "sha256": "1040c36425d1a3d555c5c6ea66cfadbcbcfc746bdabde490053089d9b446a75b",
+            "size": 627704,
+            "writtenAt": 1790079820869
+          },
+          "Einheit 0 bis Einheit 4/Test zu Einheit 2.pdf": {
+            "sha256": "13135f8988e2ef314b8786f1d4ea2e5406b0ef734c0894b7a137cd3fabe1ab11",
+            "size": 1508948,
+            "writtenAt": 1790079821057
+          },
+          "Einheit 0 bis Einheit 4/Test zu Einheit 3.pdf": {
+            "sha256": "e39f359eaca72fb589581607aa1774e6755891d2de26dee9a985537c75ae692a",
+            "size": 592527,
+            "writtenAt": 1790079821134
+          },
+          "Einheit 0 bis Einheit 4/Test zu Einheit 4.pdf": {
+            "sha256": "121b70919b53faac8e853795f1cd26ca2e1823310541864418bae72171cab446",
+            "size": 582460,
+            "writtenAt": 1790079821241
+          },
+          "Einheit 0 bis Einheit 4/Tests_Einheit1-Einheit4_LS.pdf": {
+            "sha256": "713eae047b8cd2cc0da1a75d38ffb652c0cffea2d166fa97ba880a076943d6a8",
+            "size": 501288,
+            "writtenAt": 1790079821317
+          },
+          "Einheit 0 bis Einheit 4/Verben_Einheit0-Einheit4.pdf": {
+            "sha256": "4001bc5e048757acf380460e4ecea65891b99259cd6051d13eea79215e05073e",
+            "size": 159544,
+            "writtenAt": 1790079821356
+          },
+          "Einheit 0 bis Einheit 4/Verrückte Verben.pdf": {
+            "sha256": "57f7d9455b9283dd64a94baf688a408cbfed3d4ae83148fe7069d2a432358124",
+            "size": 63599,
+            "writtenAt": 1790079821420
+          },
+          "Einheit 0 bis Einheit 4/Verrückte Verben_LS.pdf": {
+            "sha256": "5ff26fc278f24ccd3f0e5752ae213cfaf269be49cd15eb71fe458298f29505fe",
+            "size": 53199,
+            "writtenAt": 1790079821446
+          },
+          "Einheit 0 bis Einheit 4/W-Frage_oder_Satzfrage.pdf": {
+            "sha256": "faff4831b3045fcdf38a115758894a2c4867da49de0f0cdbb1a801bcfca068a6",
+            "size": 133433,
+            "writtenAt": 1790079821484
+          },
+          "Einheit 0 bis Einheit 4/W-Frage_oder_Satzfrage_LS.pdf": {
+            "sha256": "217a60953e7a7c4dec6cc338d6433b08954c7faf0eb3fc9d8ea61484275ea27e",
+            "size": 71533,
+            "writtenAt": 1790079821554
+          },
+          "Einheit 0 bis Einheit 4/Wiederholung_Fragen_Verben.pdf": {
+            "sha256": "319bdfa0685b27509c6baba0c5031617880d2eb95a60098dc9da67c5165f33f8",
+            "size": 236801,
+            "writtenAt": 1790079821603
+          },
+          "Einheit 0 bis Einheit 4/Wiederholung_Fragen_Verben_LS.pdf": {
+            "sha256": "c0191931c20352f64b20214778e40c3fb3f8d8983e9a407705980b70bf79b5ad",
+            "size": 236139,
+            "writtenAt": 1790079821666
+          },
+          "Einheit 0/1-09_Das_Leben_A1.mp3": {
+            "sha256": "92dbf9d975dda2a153d0697d3a19749c251ced135e8ffda4a406d1109c713a90",
+            "size": 1889250,
+            "writtenAt": 1790079821874
+          },
+          "Einheit 0/AB_Wie_ist_deine_Telefonnummer.pdf": {
+            "sha256": "95db355eebe4ad3297d337101b0cc46faee8941e4bbd0a12b7ca2172a0df783d",
+            "size": 142259,
+            "writtenAt": 1790079821950
+          },
+          "Einheit 0/AB_Wie_ist_deine_Telefonnummer_LS.pdf": {
+            "sha256": "6775020c2c8493fde4c38204ead9ef2dfaa3f562952a61d208f2b1a66d038e86",
+            "size": 144039,
+            "writtenAt": 1790079821990
+          },
+          "Einheit 0/E0_Guten Tag_Wie heiß_2023.pdf": {
+            "sha256": "592561050309be4c8827abada6ae1725aaeac7652973ad8e01c2c226d368a069",
+            "size": 180033,
+            "writtenAt": 1790079822032
+          },
+          "Einheit 0/E0_das_Alphabet_2024.pdf": {
+            "sha256": "26cd240610645589bd19760e362eb64e7c990c9750ff3bd32e921d1939cd66ed",
+            "size": 239358,
+            "writtenAt": 1790079822081
+          },
+          "Einheit 0/Genus_und_Plural_mitRegeln.pdf": {
+            "sha256": "0399c09bbb36476baf1314cd9e8e6668d7eaef5919db8a7ccf948ccadec9610b",
+            "size": 399501,
+            "writtenAt": 1790079822143
+          },
+          "Einheit 0/Genus_und_Plural_mitRegeln_LS.pdf": {
+            "sha256": "7b72164b92868b8697325d8cb7b9028814b79c5298469b4fd85e5d4ba48768d3",
+            "size": 400317,
+            "writtenAt": 1790079822217
+          },
+          "Einheit 0/Kontaktdaten.mp3": {
+            "sha256": "0e62ea82d704975a56759710d1b5ff2b25b34c2d9ab7e248b0ebd8673d7e10c0",
+            "size": 3811871,
+            "writtenAt": 1790079822708
+          },
+          "Einheit 0/Kontaktdaten.pdf": {
+            "sha256": "605cc86892c6bb8508273aeee0a04827b91e49441a609b8c154554b79f635a28",
+            "size": 152053,
+            "writtenAt": 1790079822780
+          },
+          "Einheit 0/Kontaktdaten_LS.pdf": {
+            "sha256": "73ed09284540cc1e3c3330e19386e2d4ce7b0f18ed1cf8404c7620b8be3da508",
+            "size": 157986,
+            "writtenAt": 1790079822856
+          },
+          "Einheit 0/Wie_ist_deine_Telefonnummer_studio21.mp3": {
+            "sha256": "1f372732b77e7825c924b70005bbf4b14df4837c88057892013fc58d312e7c3e",
+            "size": 855288,
+            "writtenAt": 1790079822966
+          },
+          "Einheit 1/E1_Personalpronomen.pdf": {
+            "sha256": "7035392987ca5cb71b5fbf5dc65640eda2924632e4138106eb85e8c6ee696949",
+            "size": 211063,
+            "writtenAt": 1790079823017
+          },
+          "Einheit 1/E1_Personalpronomen_LS.pdf": {
+            "sha256": "b9041a458d53891303faf8d97c072ef58f39897b91807b3d9ca8b22df4cbc3a8",
+            "size": 217525,
+            "writtenAt": 1790079823057
+          },
+          "Einheit 1/E1_Sprachschatten_wir_ihr.pdf": {
+            "sha256": "b207604c0d9fdf6a983b0f604f8e8738071da5d8e78515e680ea318eeee3d7eb",
+            "size": 118822,
+            "writtenAt": 1790079823128
+          },
+          "Einheit 1/E1_Verbkonjugation123_Verbposition_updated.pdf": {
+            "sha256": "845a983ad7351bb0e979f637ab6ee93a1c3224fe40b8843c06ea7a7e7d8c9659",
+            "size": 119558,
+            "writtenAt": 1790079823158
+          },
+          "Einheit 1/E1_Verbkonjugation123_Verbposition_updated_LS.pdf": {
+            "sha256": "2be48450b626e4fc2dcc763dfc6a071524933068eb613c513c4c63745a7b8a4b",
+            "size": 126577,
+            "writtenAt": 1790079823231
+          },
+          "Einheit 1/E1_Verbkonjugation_mit Übung_2023.pdf": {
+            "sha256": "7bcaf47f6d7aa2b474840fa12807f2f7b3dfd6608ac804b2d9bab10a0974147e",
+            "size": 577771,
+            "writtenAt": 1790079823355
+          },
+          "Einheit 1/E1_Verbkonjugation_mit Übung_2023_LS.pdf": {
+            "sha256": "cb2303c28f00ea2d24d424a35abe4e8791439dc8a495247c298db2321fd68d1d",
+            "size": 167438,
+            "writtenAt": 1790079823413
+          },
+          "Einheit 1/E1_nach dem Befinden fragen.pdf": {
+            "sha256": "0707b79d763954668d3b487f89b9f21a7aff90587d3c001af4f5aa6b64e24910",
+            "size": 471870,
+            "writtenAt": 1790079823506
+          },
+          "Einheit 1/Unregelmaessige_Verben_LS_v2.pdf": {
+            "sha256": "0e08aefafed7e0de6a19cf8a1b33542bde52f7b8a667bd2494dff28e4a5e7a83",
+            "size": 216687,
+            "writtenAt": 1790079823592
+          },
+          "Einheit 1/Unregelmaessige_Verben_v2.pdf": {
+            "sha256": "d1cac86d8cbe6b4e80480476c2c142395d89410e2b81a0338456697cc406ee03",
+            "size": 192896,
+            "writtenAt": 1790079823630
+          },
+          "Einheit 1/Verben.pdf": {
+            "sha256": "aca5bb99174c9d2920ce29279344111a84a2d83713583a76992765365cf65d8e",
+            "size": 84907,
+            "writtenAt": 1790079823683
+          },
+          "Einheit 1/Verben_LS.pdf": {
+            "sha256": "526b653e490c61d81306ea2fe0a24b0d8a666aa22d21a31f0613aa25a2f9403b",
+            "size": 81160,
+            "writtenAt": 1790079823755
+          },
+          "Einheit 2/E2_Ich verstehe nicht.pdf": {
+            "sha256": "3f8749da97631991dce3a0e151437a4872c05145e06a9a8ab6d383c031339d7a",
+            "size": 256356,
+            "writtenAt": 1790079823828
+          },
+          "Einheit 2/E3_Negation mit nicht.pdf": {
+            "sha256": "239de8f32254c4b4b46e629d004ee1555e4c96dd7471c04d789b788cf09f86a7",
+            "size": 111980,
+            "writtenAt": 1790079823883
+          },
+          "Einheit 2/E3_Negation mit nicht_LS.pdf": {
+            "sha256": "4c455faee2183319b9e816de01cfe77bc93bab5195c080320b86a213f1573ebc",
+            "size": 127389,
+            "writtenAt": 1790079823997
+          },
+          "Einheit 2/Komposita.pdf": {
+            "sha256": "f9bd44397f98242e73c8fa17172ad18b95aa7633e1d0d7610151a3703daceb6d",
+            "size": 605968,
+            "writtenAt": 1790079824087
+          },
+          "Einheit 2/Komposita_LS.pdf": {
+            "sha256": "bff1f85feb9040d70c9fc4c9c0c6295d651767dd82b4dbf35fd6d1ab87e7fb3b",
+            "size": 666016,
+            "writtenAt": 1790079824195
+          },
+          "Einheit 2/Telefonnummern.pdf": {
+            "sha256": "10f1b8f68bf9dcf0e2ed21c6e906bb04d246eecaea911fd3cd436f2f8623c443",
+            "size": 34881,
+            "writtenAt": 1790079824325
+          },
+          "Einheit 2/Telefonnummern_LS.pdf": {
+            "sha256": "89775d4cef9bc2822af9a6d3ac6a2892ad3f398a4313a10157134f5cc7927f93",
+            "size": 35435,
+            "writtenAt": 1790079824350
+          },
+          "Einheit 2/Telefonnummern_Tangram.mp3": {
+            "sha256": "2b4ffb6432f8c75a470301b6b9ac6f72f668694f94a913298dccd883f1cb3ac5",
+            "size": 1782600,
+            "writtenAt": 1790079824571
+          },
+          "Einheit 3/Bestimmter_unbestimmter_Artikel.pdf": {
+            "sha256": "27cbb73ff590aa6126c3f030e2c51bf75dd5029a7d9e932984d0c89f73a9f69d",
+            "size": 63009,
+            "writtenAt": 1790079824660
+          },
+          "Einheit 3/Bestimmter_unbestimmter_Artikel_LS.pdf": {
+            "sha256": "668979ec6dd47e19a0ef47deb8000f3757d7bfdecfcde1150767ac19d8570098",
+            "size": 63323,
+            "writtenAt": 1790079824683
+          },
+          "Einheit 3/Chatbot_Feedback_Engagement.pdf": {
+            "sha256": "d7b825eb8114eb7fab6e8b5ce9327e1ad68180aca458b870f51c51ea5c514884",
+            "size": 247021,
+            "writtenAt": 1790079824728
+          },
+          "Einheit 3/E2_E3_Verbkonjugation_mit Übung_LS_v3.pdf": {
+            "sha256": "4a37a3a3c14e2870bfd6e66b689748d7d4ca7eb7ca7ce0de9a44717d0022d1a3",
+            "size": 184949,
+            "writtenAt": 1790079824813
+          },
+          "Einheit 3/E2_E3_Verbkonjugation_mit Übung_v3.pdf": {
+            "sha256": "a2fcfda40d705adae24f91cce19fbefff5a54682c366f32ef29557e31b9f0f73",
+            "size": 181109,
+            "writtenAt": 1790079824855
+          },
+          "Einheit 3/E3_Deutsche Syntax1_TP.pdf": {
+            "sha256": "ceb998e9638cb06b46aee16306fe3832bb42bec19674db7d1ee8a39a2a28e58b",
+            "size": 166066,
+            "writtenAt": 1790079824895
+          },
+          "Einheit 3/E3_Deutsche Syntax1_TP_LS.pdf": {
+            "sha256": "3c75f042011e9849fbe600bed7050de44ff02aaf53e839e3d8ddb167b489d564",
+            "size": 178651,
+            "writtenAt": 1790079824943
+          },
+          "Einheit 3/E3_Negation mit kein-.pdf": {
+            "sha256": "2da6373d507e40e5b5e06a9e0c580df89b36c7b35ee0b8a525a77c32204d255e",
+            "size": 532451,
+            "writtenAt": 1790079825053
+          },
+          "Einheit 3/E3_Negation mit kein-_LS.pdf": {
+            "sha256": "bb2f1e6bd7211e46fd24d6a8069c307b0b8aef702dae9272e47ab37f5cd69d11",
+            "size": 224148,
+            "writtenAt": 1790079825249
+          },
+          "Einheit 3/E3_bestimmter_unbestimmter Artikel_v2.pdf": {
+            "sha256": "b1b48bf1dfac644707c5002e8c3fbf582d00c55c1ee5d79d919b1d54f2ae68a3",
+            "size": 607791,
+            "writtenAt": 1790079825534
+          },
+          "Einheit 3/E3_bestimmter_unbestimmter Artikel_v2_LS.pdf": {
+            "sha256": "ba262e20a9c42e3239cbed87087a743409f244e49973067632ab533ebb412fcd",
+            "size": 212364,
+            "writtenAt": 1790079825577
+          },
+          "Einheit 3/E4_Deutsche Syntax 2_Inversion_kurz.pdf": {
+            "sha256": "af00ec8a8220c3dd9fd567ab0dbf09d22eaea5489a90eb86a5a62eb75e3ebc05",
+            "size": 161212,
+            "writtenAt": 1790079825967
+          },
+          "Einheit 3/E4_Deutsche Syntax 2_Inversion_kurz_LS.pdf": {
+            "sha256": "aa692c70acb2f4cbd8664e522364a8b7cbb7f78d6eb7b3cc56a439b7f88d9312",
+            "size": 163054,
+            "writtenAt": 1790079826048
+          },
+          "Einheit 3/Fragespiel_Satzfragen.pdf": {
+            "sha256": "573957bb8c1ab1c09f4e6309b20a839488acc51109a573f5d87ae72446e7b3b2",
+            "size": 124827,
+            "writtenAt": 1790079826118
+          },
+          "Einheit 4/E4_Im Restaurant_Dialog mit Artikelwörtern_updated2.pdf": {
+            "sha256": "63bed9733daccbcd3820883757531a7817ce4d5d9bed47fbd088397cf56abd45",
+            "size": 286570,
+            "writtenAt": 1790079826181
+          },
+          "Einheit 4/E4_Im Restaurant_Dialog mit Artikelwörtern_updated2_LS.pdf": {
+            "sha256": "17ce8667970c5ee68bf9a1bb0543f20f2437fe090f32b1c3c9435db765d112eb",
+            "size": 297394,
+            "writtenAt": 1790079826237
+          },
+          "Einheit 4/E4_Negation_nicht_kein-_LS_v2.pdf": {
+            "sha256": "79a4af17ba0fcd43363107941cb95c5296039d2940d6127ede5544eb605bfeba",
+            "size": 128651,
+            "writtenAt": 1790079826308
+          },
+          "Einheit 4/E4_Negation_nicht_kein-v2.pdf": {
+            "sha256": "6409136f63953416c1036f62c7818c04fd861ad853650cd82d7b983c9baaebd4",
+            "size": 120106,
+            "writtenAt": 1790079826383
+          },
+          "Einheit 4/Ideen1_Speisekarte.pdf": {
+            "sha256": "e9e16d5cbc53d8838b8e4a82c282ca74e54ebebb8ac234361de80e35f04d7672",
+            "size": 83712,
+            "writtenAt": 1790079826412
+          },
+          "Einheit 4/Im_Cafe.pdf": {
+            "sha256": "96b55621e66aa2ac7f5f24eccc8502d8b51f9fbb9fe47facb1f960fc64d199ea",
+            "size": 155890,
+            "writtenAt": 1790079826451
+          },
+          "Sample Tests/German1_ST1_SamplePaper.pdf": {
+            "sha256": "4773737d253b2687a15bdf8838ae7cdae541e7dadee7a1fef9dc1651cb6c1d68",
+            "size": 288169,
+            "writtenAt": 1790079826504
+          },
+          "Sample Tests/German1_ST1_SamplePaper_LS.pdf": {
+            "sha256": "e5df2f31bbf8c32c77943978fe61cf4426e443750c3090f7c484caf91b828c83",
+            "size": 291217,
+            "writtenAt": 1790079826599
+          },
+          "Sample Tests/German1_ST1_Sample_Audio1.mp3": {
+            "sha256": "ddac0f4bc891179e6311b210faa9e0de784cca2caa15f7195cb896c5570fef3d",
+            "size": 1986292,
+            "writtenAt": 1790079826902
+          },
+          "Sample Tests/German1_ST1_Sample_Audio2.mp3": {
+            "sha256": "403300b9b5676416864020ca621f9c798ed285ab44e06647e6e0f466e5f09ec8",
+            "size": 1054477,
+            "writtenAt": 1790079827031
+          },
+          "Sample Tests/German1_VT_Sample.pdf": {
+            "sha256": "5b35f063a1bb57c0fb1b435f683e277b6ab9f99408ef3eb854ac5dfe58044b4f",
+            "size": 155731,
+            "writtenAt": 1790079827104
+          },
+          "Sample Tests/German1_VT_Sample_LS.pdf": {
+            "sha256": "1db03a607cf6a36ca11b99c4c1a5f973a90f571f836422d6438b8d51a0e50206",
+            "size": 157058,
+            "writtenAt": 1790079827182
+          },
+          "Textbook and Accompanying Resources/DasLeben_A1_Answers_Unit0-Unit8_July2026.pdf": {
+            "sha256": "89912b15edd338ca28e496fe40103e67d6cd4bc2fcdebffb05884886f61324ed",
+            "size": 1784335,
+            "writtenAt": 1790079827396
+          },
+          "Textbook and Accompanying Resources/DasLeben_A1_Glossary_Guide_July2026.pdf": {
+            "sha256": "450f6483ed2e6e93d1d0f9f8a16eacb1ab049a30fbb59e579814b708940762c6",
+            "size": 242677,
+            "writtenAt": 1790079827443
+          },
+          "Textbook and Accompanying Resources/DasLeben_A1_Glossary_Unit0-Unit8_July2026.pdf": {
+            "sha256": "ea33990a899ae378ae0baea49021ca8779b5c22d1a464e349b68db8a8f4f88b4",
+            "size": 1647898,
+            "writtenAt": 1790079827666
+          },
+          "Textbook and Accompanying Resources/DasLeben_A1_Glossary_Unit0-Unit8_July2026.xlsx": {
+            "sha256": "c31dc68136aedb5eae96fd6cb56d661f3d7ff79d4a4357f231e1d82d9fe0ddcd",
+            "size": 57425,
+            "writtenAt": 1790079827684
+          },
+          "Textbook and Accompanying Resources/DasLeben_A1_Unit0-Unit1.pdf": {
+            "sha256": "5157b3afe09cbcc3e278d747929582526adb829580383df2f14de1a2ff7dbb18",
+            "size": 9786810,
+            "writtenAt": 1790079829002
+          },
+          "Textbook and Accompanying Resources/DasLeben_PagePlayerApp.pdf": {
+            "sha256": "bd79d8005ad21560fb82df78b3568a5823614cd078120c4ae544827514be2bc3",
+            "size": 213936,
+            "writtenAt": 1790079829063
+          },
+          "Arbeitsblätter/E12_Verbenliste(PII)_das Leben.pdf": {
+            "sha256": "4c28c3e13e07ff5fdccb7bf44c04b4445aa15f902c9e620380564d52bc14a772",
+            "size": 315186,
+            "writtenAt": 1791120371891
+          },
+          "Arbeitsblätter/E13_Imperativ (Sie- und du-Form)_updated2025.pdf": {
+            "sha256": "0b399ff3898d54182dc99ddd0a754b0ad8b0fe0d8eb9d158a2ad96841887d813",
+            "size": 348362,
+            "writtenAt": 1791120371967
+          },
+          "Arbeitsblätter/E13_Imperativ (Sie- und du-Form)_updated2025_LS.pdf": {
+            "sha256": "2d0eb39a3b8f8de6734529b11da9fbc684c25ed3429d8cf76e92bbbb37c11f18",
+            "size": 406023,
+            "writtenAt": 1791120372032
+          },
+          "Arbeitsblätter/E13_Redemittel_Beim Arzt_v2.pdf": {
+            "sha256": "07662693d7024636db43fe7878566998157bf69d4d25cd0a6638c40c71941507",
+            "size": 48452,
+            "writtenAt": 1791120372115
+          },
+          "Einheit 5/E5_trennbare Verben_AI.pdf": {
+            "sha256": "79588916a5c4590be80fe62014f9f28bd0566d55191c39cf242660db2f3ae1d1",
+            "size": 225674,
+            "writtenAt": 1791120372173
+          },
+          "Einheit 5/Informelle_Uhrzeit.pdf": {
+            "sha256": "83f402a270fde60e40766c2eccef73c5136c4ab642282ea633a181f9eb9f6838",
+            "size": 152974,
+            "writtenAt": 1791120372216
+          },
+          "Einheit 5/Termin_Finanzamt.mp3": {
+            "sha256": "eb100ee363d002224397698dcaba1dec99deb014efc8466eeb9b5fe8b185a9e9",
+            "size": 474340,
+            "writtenAt": 1791120372408
+          },
+          "Einheit 5/am_um_von_bis.pdf": {
+            "sha256": "e12af2ef4e5490b3fa4435019ad91772fd6c6667bb14aa31adc7067db61766b4",
+            "size": 175118,
+            "writtenAt": 1791120372462
+          },
+          "Einheit 5/am_um_von_bis_LS.pdf": {
+            "sha256": "5248862636871dd1a559190d21dc471d2fb795a38540ecf2e13dc1e68c43e864",
+            "size": 178161,
+            "writtenAt": 1791120372511
+          },
+          "Einheit 5/Kommst du mit_ -- Trennbare Verben (Lösungen).pdf": {
+            "sha256": "bea759a14ee7907a0da19be8ac223c96d1fa9117d8fc5f5f6ffebaf6f84f1518",
+            "size": 262520,
+            "writtenAt": 1791646908613
+          },
+          "Einheit 5/Kommst du mit_ -- Trennbare Verben.pdf": {
+            "sha256": "864cec211f768d133d550de51080b220f342a961930f016e769fae493e72590e",
+            "size": 235535,
+            "writtenAt": 1791646908673
+          },
+          "Einheit 5/Neue_trennbare_Verben.pdf": {
+            "sha256": "2f96d3ad579c7ab5da4e32b99f4a7b210589ba6ecdfd66274f5289305b1ba151",
+            "size": 149471,
+            "writtenAt": 1791646908719
+          },
+          "Einheit 5/Neue_trennbare_Verben_LS.pdf": {
+            "sha256": "0b0fc7978f8a98b7cca6db596c9ef37668cccd2cca5c49870602e9a630f119ac",
+            "size": 150933,
+            "writtenAt": 1791646908794
+          },
+          "Einheit 5/Terminkalender_Alice_Murat.pdf": {
+            "sha256": "742cf24c7aee3ba63850b95636f0a51cb7c2ff0f64bcbe62a0a3abb6787bc72c",
+            "size": 55809,
+            "writtenAt": 1791646908818
+          },
+          "Einheit 5/Terminkalender_Alice_Murat_LS.pdf": {
+            "sha256": "9e2631e0c681050654498df2a6e6db11c7500d9cb2d8aceaa6f21deb1b4ebbf3",
+            "size": 222319,
+            "writtenAt": 1791646908860
+          },
+          "Einheit 5/Wechselspiel_Uhrzeiten_A.pdf": {
+            "sha256": "3d7f4fb0804d56def7b766fe9595e93ea426fc070f2e2f5c5bb9a1288fedb8e6",
+            "size": 447315,
+            "writtenAt": 1791646908966
+          },
+          "Einheit 5/Wechselspiel_Uhrzeiten_B.pdf": {
+            "sha256": "b8c72275fc9e41cc6c288a2a4b335b4ba69a35abb804ad6ff98199f42224a739",
+            "size": 375964,
+            "writtenAt": 1791646909022
+          },
+          "Einheit 5/Wie spät ist es.mp3": {
+            "sha256": "6dd7131c15294beca434f4d512c6acffdbbb8051080dfb937d4e98acf92e92a8",
+            "size": 1579719,
+            "writtenAt": 1791646909203
+          },
+          "Einheit 5/Wie_spaet_ist_es_LS_v2.pdf": {
+            "sha256": "64fd4d49c3fc91eeb65afd58183673e008609d3f03ba2f457b1b1a2ede1de1fb",
+            "size": 218349,
+            "writtenAt": 1791646909249
+          },
+          "Einheit 5/Wie_spaet_ist_es_v2.pdf": {
+            "sha256": "cd967dccad7f6bcc0de52a84022b94e2761182f0130f1ff8efd5d9c6c41b062c",
+            "size": 214862,
+            "writtenAt": 1791646909338
+          }
+        },
+        "folder": "LAG1201 [2610] (94846)"
+      }
+    },
+    "legacyFiles": {}
+  },
+  "settings": {
+    "baseUrl": "https://obsync-man.lab.packetcraft.dev",
+    "bucket": "",
+    "courses": [
+      93794,
+      94846
+    ],
+    "targetFolder": "Canvas",
+    "trashFolder": "Canvas/_trash",
+    "conflictFolder": "Canvas/_conflicts",
+    "syncIntervalMinutes": 60,
+    "policy": {
+      "version": 1,
+      "default": "include",
+      "rules": [
+        {
+          "name": "no-huge",
+          "priority": 10,
+          "action": "skip",
+          "match": {
+            "min_size": 52428800
+          }
+        }
+      ]
+    }
+  }
+}
