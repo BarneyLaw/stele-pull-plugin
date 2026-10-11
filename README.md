@@ -45,7 +45,8 @@ surfaces cannot drift apart. Use whichever you prefer.
 1. Set **Store URL** to the read-only endpoint for your stele-pull bucket. For
    local development, run `stele-pull serve` in the repo root and use
    `http://127.0.0.1:8765`; leave **Bucket** as `stele-pull` or empty, it accepts
-   both.
+   both. To run the whole pipeline without a machine of your own, see
+   [Hosted setup on free tiers](#hosted-setup-on-free-tiers).
 2. Set **Course IDs** to a comma-separated list of numeric Canvas course IDs.
    The store is keyed by ID, not course code: `stele-pull ls` or
    `stele-pull-worker courses` lists them.
@@ -64,6 +65,229 @@ or an auth proxy and do plain GETs.
 If you must sign requests directly, use `aws4fetch` with a **read-only** Garage
 key, and verify SubtleCrypto is actually available in Obsidian's mobile origin
 first. See the comments at the top of `src/store.ts`.
+
+## Hosted setup on free tiers
+
+The reference deployment is a Kubernetes CronJob writing to Garage on a
+homelab. If you don't have a homelab, the same pipeline runs on three free
+tiers with no server to look after:
+
+```
+GitHub Actions (daily cron)  ──S3 API──▶  Cloudflare R2  ◀──binding──  Cloudflare Worker  ◀──GET/Range──  this plugin
+  runs stele-pull-worker                  the store                     read-only, no keys                (any device)
+```
+
+| Piece | Service | Free allowance (at the time of writing; check before relying on it) |
+|---|---|---|
+| Worker | GitHub Actions, private repo | 2,000 minutes a month. A daily pass, build included, takes a few minutes |
+| Store | Cloudflare R2 | 10 GB storage, 1M writes and 10M reads a month, **no egress fees** |
+| Read endpoint | Cloudflare Workers | 100,000 requests a day |
+
+R2 suits this well: it honours `If-None-Match`, so the worker's store lease is
+a real lock there rather than the best-effort one it gets on Garage, and
+egress is free, so pulling the same PDFs to several devices costs nothing.
+Cloudflare asks for a payment method before it enables R2, even on the free
+tier.
+
+### 1. Create the bucket
+
+1. In the Cloudflare dashboard, go to **R2 → Create bucket** and name it
+   `stele-pull`. Leave public access **off**.
+2. Go to **R2 → Manage API tokens → Create API token**. Choose **Object Read &
+   Write**, scope it to the `stele-pull` bucket only, and note the **Access Key
+   ID**, the **Secret Access Key**, and your **account ID**. This key is for the
+   worker alone. It never goes near the plugin.
+
+### 2. Run the worker on a schedule
+
+Create a **private** GitHub repository (it holds your Canvas token as a
+secret, and private repos don't have their schedules paused for inactivity).
+It needs two files.
+
+`rules.json` holds the worker rules. Keep them to hard caps; see
+[Exclusion rules](#exclusion-rules) for why the opinionated filtering belongs
+in the plugin:
+
+```json
+{
+  "version": 1,
+  "default": "include",
+  "rules": [
+    { "name": "no-video", "priority": 10, "action": "skip",
+      "match": { "ext": ["mp4", "mkv", "mov", "avi", "webm", "m4v", "wmv"] } },
+    { "name": "hard-size-cap", "priority": 10, "action": "skip",
+      "match": { "min_size": 104857600 } },
+    { "name": "keep-slides-regardless", "priority": 100, "action": "include",
+      "match": { "ext": ["pdf", "pptx", "docx", "md"] } }
+  ]
+}
+```
+
+`.github/workflows/stele-pull.yml` builds the worker from source and runs one
+pass:
+
+```yaml
+name: stele-pull worker
+
+on:
+  schedule:
+    # Actions cron is always UTC: this is 18:17 in Singapore. Off the hour on
+    # purpose, since scheduled runs on :00 are the ones GitHub delays most.
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+
+# The worker publishes manifests/<course>/latest last, read-modify-write.
+# Never let two passes overlap: this plays the role of concurrencyPolicy: Forbid.
+concurrency:
+  group: stele-pull-worker
+  cancel-in-progress: false
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    # Must stay below -lock-ttl so a killed run's lease has expired by the next one.
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BarneyLaw/stele-pull
+          ref: main            # pin a tag or commit SHA once it works
+          path: worker
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: worker/go.mod
+          cache-dependency-path: worker/go.sum
+
+      - name: Build
+        run: go build -C worker -trimpath -o "$RUNNER_TEMP/stele-pull-worker" ./cmd/stele-pull-worker
+
+      - name: Pull
+        env:
+          CANVAS_BASE_URL: ${{ vars.CANVAS_BASE_URL }}
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+          GARAGE_ENDPOINT: https://${{ vars.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          GARAGE_BUCKET: stele-pull
+          GARAGE_REGION: auto
+          GARAGE_ACCESS_KEY: ${{ secrets.R2_ACCESS_KEY_ID }}
+          GARAGE_SECRET_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          COURSES: ${{ vars.COURSES }}
+        run: |
+          "$RUNNER_TEMP/stele-pull-worker" run \
+            ${COURSES:+-course="$COURSES"} \
+            -rules=rules.json -tmp-dir="$RUNNER_TEMP" -lock-ttl=3h
+```
+
+The variables are named `GARAGE_*` for historical reasons; the worker speaks
+plain S3 and works against R2 unchanged. In the repository, under **Settings →
+Secrets and variables → Actions**, add:
+
+| Kind | Name | Value |
+|---|---|---|
+| Secret | `CANVAS_TOKEN` | Canvas → **Account → Settings → New access token** |
+| Secret | `R2_ACCESS_KEY_ID` | from step 1 |
+| Secret | `R2_SECRET_ACCESS_KEY` | from step 1 |
+| Variable | `R2_ACCOUNT_ID` | from step 1 |
+| Variable | `CANVAS_BASE_URL` | your institution's Canvas, e.g. `https://canvas.nus.edu.sg` |
+| Variable | `COURSES` | optional: comma-separated course codes or IDs. Unset pulls every active course |
+
+To see which courses your token can reach, run the worker once on your own
+machine: `CANVAS_BASE_URL=... CANVAS_TOKEN=... go run ./cmd/stele-pull-worker courses`
+in the worker repository.
+
+Then open **Actions → stele-pull worker → Run workflow** and check that the
+first pass succeeds. Exit codes are the CronJob's: 2 is a configuration error,
+3 means another pass holds the lease, 4 means Canvas rejected the token
+(tokens expire, so this one will happen eventually: replace the secret).
+
+### 3. Serve the store read-only
+
+The plugin holds no S3 keys, so it needs a plain-GET view of the bucket. A
+Cloudflare Worker bound to the bucket provides one. It serves only what
+consumers read, honours `Range` (the plugin refuses a `200` where it asked for
+a `206`), and answers 404 to anything without the right token in the path.
+
+1. Go to **Workers & Pages → Create → Create Worker**, name it, deploy the
+   placeholder, then **Edit code** and replace it with:
+
+   ```js
+   // Read-only view of the stele-pull bucket for the Obsidian plugin.
+   // URL shape: https://<worker>/<READ_TOKEN>/<store key>
+   export default {
+     async fetch(request, env) {
+       if (request.method !== "GET" && request.method !== "HEAD") {
+         return new Response(null, { status: 405, headers: { allow: "GET, HEAD" } });
+       }
+       const prefix = `/${env.READ_TOKEN}/`;
+       const path = new URL(request.url).pathname;
+       if (!env.READ_TOKEN || !path.startsWith(prefix)) {
+         return new Response(null, { status: 404 });
+       }
+       const key = decodeURIComponent(path.slice(prefix.length));
+       // Only what consumers read. The lease and run logs stay private.
+       if (!key.startsWith("manifests/") && !key.startsWith("blobs/")) {
+         return new Response(null, { status: 404 });
+       }
+
+       let obj;
+       try {
+         obj = request.method === "HEAD"
+           ? await env.BUCKET.head(key)
+           : await env.BUCKET.get(key, { range: request.headers });
+       } catch {
+         return new Response(null, { status: 416 });
+       }
+       if (!obj) return new Response(null, { status: 404 });
+
+       const headers = new Headers();
+       obj.writeHttpMetadata(headers);
+       headers.set("etag", obj.httpEtag);
+       headers.set("accept-ranges", "bytes");
+       headers.set("cache-control", "no-store"); // `latest` must never be stale
+
+       const r = request.headers.has("range") ? obj.range : undefined;
+       if (!r) return new Response(obj.body, { headers });
+       const start = "suffix" in r ? obj.size - r.suffix : (r.offset ?? 0);
+       const end = "suffix" in r || r.length === undefined
+         ? obj.size - 1
+         : Math.min(start + r.length, obj.size) - 1;
+       headers.set("content-range", `bytes ${start}-${end}/${obj.size}`);
+       return new Response(obj.body, { status: 206, headers });
+     },
+   };
+   ```
+
+2. Under the Worker's **Settings → Bindings**, add an **R2 bucket** binding named
+   `BUCKET` pointing at `stele-pull`.
+3. Under **Settings → Variables and secrets**, add a **Secret** named
+   `READ_TOKEN` with a long random value, e.g. from `openssl rand -hex 32`.
+
+### 4. Point the plugin at it
+
+- **Store URL**: `https://<worker-name>.<your-subdomain>.workers.dev/<READ_TOKEN>`
+- **Bucket**: empty. The token takes its place in the path.
+- **Course IDs** and **Target folder** as in [Setup](#setup).
+
+The panel's course check confirms each ID resolves to a manifest.
+
+### What this trades away
+
+- **The token is a credential in the vault.** It is read-only and can reach
+  nothing but course files, but it sits in `data.json` and travels wherever the
+  vault syncs. To revoke it, change `READ_TOKEN` on the Worker and paste the new
+  URL into each device. If you want no secret in the vault at all, use the
+  network-layer setup from [Credentials](#credentials) instead: Garage and the
+  worker on an always-on box (an Oracle Cloud Always Free VM works), reached
+  over Tailscale's free plan.
+- **Scheduled Actions are best-effort.** GitHub may delay a scheduled run, or
+  skip one under load. The next day's pass catches up, and a failed or skipped
+  pass changes nothing the plugin sees: `latest` is published last.
+- **The store only grows.** Blobs are write-once and nothing deletes them. If
+  you approach R2's 10 GB, run `stele-pull gc` from the worker repository with
+  the same `GARAGE_*` variables to see what is unreferenced, then
+  `stele-pull gc -apply` to delete it.
 
 ## Exclusion rules
 
